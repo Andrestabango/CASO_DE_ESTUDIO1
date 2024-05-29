@@ -183,7 +183,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="f1e2b" class="javax.swing.JList" binding="list2" default-binding="true">
+          <component id="4817d" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
             <constraints/>
             <properties/>
           </component>

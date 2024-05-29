@@ -20,6 +20,7 @@ public class Ventana {
     private JList list1;
     private JList list2;
     private JButton reporteButton;
+    private JTextArea textArea1;
 
     private Listas empleados = new Listas();
     DefaultListModel dlm = new DefaultListModel();
@@ -110,10 +111,7 @@ public class Ventana {
                 String informe = empleados.generarInforme();
                 JTextArea textArea = new JTextArea(informe);
                 textArea.setEditable(false);
-                JScrollPane scrollPane = new JScrollPane(textArea);
-                scrollPane.setPreferredSize(new Dimension(600, 400));
-
-                JOptionPane.showMessageDialog(null, scrollPane, "Informe de Empleados", JOptionPane.INFORMATION_MESSAGE);
+                textArea1.setText(informe);
             }
         });
     }
@@ -133,6 +131,20 @@ public class Ventana {
             dl.addElement(e);
         listaMostrar.setModel(dl);
     }
+
+
+    /*public void quemarDatos(){
+        try {
+
+            Empleado empleado1 = new Empleado("1727066167", "EMILIO", new Fecha(8, 8, 2003), 5000.0);
+            Empleado empleado2 = new Empleado("1753468311", "ISRAEL", new Fecha(4, 11, 2004), 1200.0);
+
+
+        } catch (Exception e) {
+        }
+
+    }*/
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ventana");
